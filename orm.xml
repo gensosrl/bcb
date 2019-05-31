@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm
+        http://java.sun.com/xml/ns/persistence/orm_2_0.xsd" version="2.0">
+
+    <package>code.model</package>
+
+    <sequence-generator name="CustomerIdSeq" sequence-name="customer_id_seq" />
+
+    <entity class="Customer">
+        <named-query name="AllCustomer">
+            <query><![CDATA[from Customer c order by c.id]]></query>
+        </named-query>
+    </entity>
+
+</entity-mappings>
